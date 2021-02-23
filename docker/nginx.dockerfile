@@ -2,4 +2,4 @@ FROM nginx
 
 ADD docker/conf/vhost.conf /etc/nginx/conf.d/default.conf
 
-WORKDIR /var/www/test-site
+WORKDIR /var/www/DockerLaravel

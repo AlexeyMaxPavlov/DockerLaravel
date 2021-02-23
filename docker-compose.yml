@@ -8,7 +8,7 @@ services:
     ports:
     - "8098:80"
     volumes:
-      - ./:/var/www/test-site
+      - ./:/var/www/DockerLaravel
     links:
       - php-fpm
 
@@ -17,7 +17,7 @@ services:
       context: .
       dockerfile: docker/fpm.dockerfile
     volumes:
-    - ./:/var/www/test-site
+    - ./:/var/www/DockerLaravel
     links:
       - mysql
 
@@ -27,5 +27,5 @@ services:
       - "33061:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=test_site
+      - MYSQL_DATABASE=DockerLaravel
 
